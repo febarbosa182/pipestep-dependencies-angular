@@ -1,7 +1,7 @@
 package br.com.easynvest.dependencies
 
 class Dependencies{
-    def call (jenkins, jenkinsParams) {
+    def call (jenkins) {
         jenkins.podTemplate(
             containers: [
                 jenkins.containerTemplate(name: 'node', image: jenkins.env.CI_IMAGE, ttyEnabled: true, command: 'cat')
