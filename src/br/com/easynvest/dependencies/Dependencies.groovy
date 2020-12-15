@@ -17,6 +17,8 @@ class Dependencies{
             jenkins.node(jenkins.POD_LABEL){
                 jenkins.container('node'){
                     jenkins.sh label: "Installing dependencies", script: "npm ci"
+                    def packageJson = jenkins.readJSON file: 'package.json'
+                    jenkins.env.APP_VERSION = packageJson.version
                 }
             }
         }
