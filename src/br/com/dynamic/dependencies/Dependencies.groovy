@@ -1,4 +1,4 @@
-package br.com.easynvest.dependencies
+package br.com.dynamic.dependencies
 
 class Dependencies{
     def call (jenkins) {
