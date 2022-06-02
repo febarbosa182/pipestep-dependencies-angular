@@ -6,7 +6,7 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(name: 'node', image: jenkins.env.CI_IMAGE, ttyEnabled: true, command: 'cat',
                     envVars: [
-                        envVar(key: 'NODE_OPTIONS', value: '--max-old-space-size=2048')
+                        jenkins.envVar(key: 'NODE_OPTIONS', value: '--max-old-space-size=2048')
                     ]
                 )
             ],
