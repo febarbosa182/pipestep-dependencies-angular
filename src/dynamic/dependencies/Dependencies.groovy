@@ -1,4 +1,4 @@
-package br.com.dynamic.dependencies
+package dynamic.dependencies
 
 class Dependencies{
     def call (jenkins) {
