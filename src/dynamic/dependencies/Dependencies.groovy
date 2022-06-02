@@ -8,7 +8,7 @@ class Dependencies{
             ],
             yamlMergeStrategy: jenkins.merge(),
             workspaceVolume: jenkins.persistentVolumeClaimWorkspaceVolume(
-                claimName: "pvc-workspace-${jenkins.env.JOB_NAME}-${jenkins.env.BUILD_NUMBER}-${jenkins.env.JENKINS_AGENT_NAME}",
+                claimName: "pvc-workspace-${jenkins.env.JENKINS_AGENT_NAME}",
                 readOnly: false
             )
         )
