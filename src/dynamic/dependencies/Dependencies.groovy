@@ -4,11 +4,7 @@ class Dependencies{
     def call (jenkins) {
         jenkins.podTemplate(
             containers: [
-                jenkins.containerTemplate(name: 'node', image: jenkins.env.CI_IMAGE, ttyEnabled: true, command: 'cat',
-                    envVars: [
-                        jenkins.envVar(key: 'NODE_OPTIONS', value: '--max-old-space-size=2048')
-                    ]
-                )
+                jenkins.containerTemplate(name: 'node', image: jenkins.env.CI_IMAGE, ttyEnabled: true, command: '/bin/sh')
             ],
             yamlMergeStrategy: jenkins.merge(),
             workspaceVolume: jenkins.persistentVolumeClaimWorkspaceVolume(
