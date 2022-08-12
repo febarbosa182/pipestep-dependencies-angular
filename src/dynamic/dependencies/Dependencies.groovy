@@ -9,7 +9,6 @@ class Dependencies{
                     image: 'node:18-alpine', 
                     ttyEnabled: true, 
                     command: '/bin/sh',
-                    resourceRequestCpu: '100',
                     resourceRequestMemory: '512'
                 )
             ],
