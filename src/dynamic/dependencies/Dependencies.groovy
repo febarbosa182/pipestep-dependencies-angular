@@ -9,7 +9,7 @@ class Dependencies{
                     image: 'node:18-alpine', 
                     ttyEnabled: true, 
                     command: '/bin/sh',
-                    resourceRequestMemory: '512'
+                    resourceRequestMemory: '1024'
                 )
             ],
             yamlMergeStrategy: jenkins.merge(),
