@@ -8,7 +8,8 @@ class Dependencies{
                     name: 'node', 
                     image: 'node:18-bullseye-slim', 
                     ttyEnabled: true, 
-                    command: '/bin/sh',
+                    command: 'sleep',
+                    args: '99d',
                     resourceRequestMemory: '2046'
                 )
             ],
