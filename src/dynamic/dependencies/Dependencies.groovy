@@ -6,7 +6,7 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(
                     name: 'node', 
-                    image: 'cimg/node:18.7', 
+                    image: 'node:18-alpine', 
                     ttyEnabled: true, 
                     command: '/bin/sh',
                     resourceRequestMemory: '2046'
@@ -22,7 +22,7 @@ class Dependencies{
         {
             jenkins.node(jenkins.POD_LABEL){
                 jenkins.container('node'){
-                    jenkins.sh label: "Installing dependencies", script: "npm install"
+                    jenkins.sh label: "Installing dependencies", script: "npm ci"
                     def packageJson = jenkins.readJSON file: 'package.json'
                     jenkins.env.APP_VERSION = packageJson.version
                 }
