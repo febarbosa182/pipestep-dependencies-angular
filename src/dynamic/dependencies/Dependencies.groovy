@@ -13,6 +13,12 @@ class Dependencies{
                     resourceRequestMemory: '2046'
                 )
             ],
+            envVars: [
+                jenkins.envVar: (
+                    key: 'NODE_OPTIONS',
+                    value: '--max-old-space-size=1800'
+                )
+            ]
             yamlMergeStrategy: jenkins.merge(),
             workspaceVolume: jenkins.persistentVolumeClaimWorkspaceVolume(
                 claimName: "pvc-workspace-${jenkins.env.JENKINS_AGENT_NAME}",
