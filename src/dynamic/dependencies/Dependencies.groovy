@@ -6,7 +6,7 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(
                     name: 'node', 
-                    image: 'node:18-alpine', 
+                    image: 'cimg/node:18.7', 
                     ttyEnabled: true, 
                     command: '/bin/sh',
                     resourceRequestMemory: '2046'
