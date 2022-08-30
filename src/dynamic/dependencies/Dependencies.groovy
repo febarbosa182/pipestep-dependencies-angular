@@ -6,7 +6,7 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(
                     name: 'node', 
-                    image: 'node:18-slim', 
+                    image: 'node:18', 
                     ttyEnabled: true, 
                     command: 'cat',
                     resourceLimitMemory: '1024Mi'
