@@ -14,7 +14,7 @@ class Dependencies{
                 )
             ],
             envVars: [
-                jenkins.envVar: (
+                jenkins.envVar(
                     key: 'NODE_OPTIONS',
                     value: '--max-old-space-size=1800'
                 )
