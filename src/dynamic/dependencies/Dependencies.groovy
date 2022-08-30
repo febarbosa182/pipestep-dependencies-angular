@@ -6,17 +6,10 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(
                     name: 'node', 
-                    image: 'node:18-slim', 
+                    image: 'node:18-alpine', 
                     ttyEnabled: true, 
-                    command: 'sleep',
-                    args: '99d',
-                    resourceLimitMemory: '1536Mi'
-                )
-            ],
-            envVars: [
-                jenkins.envVar(
-                    key: 'NODE_OPTIONS',
-                    value: '--max-old-space-size=1024'
+                    command: 'cat',
+                    resourceLimitMemory: '1024Mi'
                 )
             ],
             yamlMergeStrategy: jenkins.merge(),
