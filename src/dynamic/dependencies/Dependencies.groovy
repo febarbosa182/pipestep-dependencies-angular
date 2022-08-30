@@ -6,11 +6,11 @@ class Dependencies{
             containers: [
                 jenkins.containerTemplate(
                     name: 'node', 
-                    image: 'node:18-bullseye-slim', 
+                    image: 'node:18-slim', 
                     ttyEnabled: true, 
                     command: 'sleep',
                     args: '99d',
-                    resourceRequestMemory: '2046'
+                    resourceLimitMemory: '2046'
                 )
             ],
             envVars: [
