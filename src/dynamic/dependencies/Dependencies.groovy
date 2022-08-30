@@ -10,13 +10,13 @@ class Dependencies{
                     ttyEnabled: true, 
                     command: 'sleep',
                     args: '99d',
-                    resourceLimitMemory: '2046Mi'
+                    resourceLimitMemory: '1536Mi'
                 )
             ],
             envVars: [
                 jenkins.envVar(
                     key: 'NODE_OPTIONS',
-                    value: '--max-old-space-size=1800'
+                    value: '--max-old-space-size=1024'
                 )
             ],
             yamlMergeStrategy: jenkins.merge(),
