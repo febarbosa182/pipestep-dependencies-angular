@@ -10,7 +10,7 @@ class Dependencies{
                     ttyEnabled: true, 
                     command: 'sleep',
                     args: '99d',
-                    resourceLimitMemory: '2046'
+                    resourceLimitMemory: '2046Mi'
                 )
             ],
             envVars: [
