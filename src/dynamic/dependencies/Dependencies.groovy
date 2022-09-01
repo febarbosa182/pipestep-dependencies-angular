@@ -33,7 +33,7 @@ class Dependencies{
                       apt update && apt upgrade -y
                       apt install sudo
                       sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
-                      sudo /sbin/mkswap /var/swap.1
+                      sudo /sbin/mkswap /var/swap.1 2>/dev/null
                       sudo /sbin/swapon /var/swap.1 2>/dev/null
                       """
                     jenkins.sh label: "Installing dependencies", script: "npm install"
