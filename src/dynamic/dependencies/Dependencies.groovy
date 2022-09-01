@@ -29,7 +29,7 @@ class Dependencies{
             jenkins.node(jenkins.POD_LABEL){
                 jenkins.container('node'){
                     jenkins.sh label: "Prepare environment", script: """
-                      set +e
+                      #!/bin/sh
                       apt update && apt upgrade -y
                       apt install sudo
                       sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
